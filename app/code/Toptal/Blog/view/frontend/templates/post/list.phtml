@@ -1,0 +1,7 @@
+<?php /** @var Toptal\Blog\Block\Posts $block */ ?>
+<h1>Toptal Posts</h1>
+<?php foreach($block->getPosts() as $post): ?>
+    <?php /** @var Toptal\Blog\Model\Post */ ?>
+    <h2><a href="<?php echo $block->getPostUrl($post);?>"><?php echo $post->getTitle(); ?></a></h2>
+    <p><?php echo $post->getContent(); ?></p>
+<?php endforeach; ?>
